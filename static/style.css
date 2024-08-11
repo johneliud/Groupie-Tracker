@@ -4,9 +4,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'League-Spartan', sans-serif;
+  font-family: 'League Spartan', sans-serif;
 }
 
 :root {
-  transition: 1s ease;
+  --transition: 0.5s ease;
+  --border-radius: 10px;
+  --background-color: rgb(117, 117, 255);
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 80vh;
+}
+
+.title h1 {
+  font-size: 40px;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 15vh;
+}
+
+.container .categories {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  min-height: 20vh;
+}
+
+.container .categories .category-btn {
+  padding: 5px 20px;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  border: 2px solid transparent;
+  font-size: 18px;
+  color: white;
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.container .categories .category-btn:hover {
+  color: var(--background-color);
+  background-color: white;
+  border: 2px solid var(--background-color);
 }
