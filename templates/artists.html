@@ -14,21 +14,88 @@
         <div class="logo-container">
           <h3>Groupie <span>Tracker</span></h3>
         </div>
+
+        <div class="back-to-home">
+          <a href="/templates/index.html">Back Home</a>
+        </div>
       </nav>
     </header>
 
     <main>
-      <div class="artists-container">
-        <div class="artists-list">
-          {{range .Artists}}
-          <a href="artist/{{.ID}}" class="artist-card">
+      <div class="container">
+        <!-- {{range .Artists}} -->
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
             <img src="{{.Image}}" alt="{{.Name}}" />
             <div class="artist-info">
               <h4 class="name">{{.Name}}</h4>
             </div>
           </a>
-          {{.end}}
         </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+
+        <div class="artist-card">
+          <a href="artist/{{.ID}}" class="artist-link">
+            <img src="{{.Image}}" alt="{{.Name}}" />
+            <div class="artist-info">
+              <h4 class="name">{{.Name}}</h4>
+            </div>
+          </a>
+        </div>
+        <!-- {{.end}} -->
       </div>
     </main>
 
