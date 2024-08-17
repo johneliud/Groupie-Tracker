@@ -1,5 +1,5 @@
 # Use golang-alpine as the base image
-FROM golang:1.22.6:alpine
+FROM golang:1.22.6-alpine
 
 # Additional image metadata
 LABEL maintainer="github.com/johneliud"
