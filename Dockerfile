@@ -4,7 +4,7 @@ FROM golang:1.22.6-alpine
 # Additional image metadata
 LABEL maintainer="github.com/johneliud"
 LABEL version="1.0"
-LABEL description="Image file for a web server that consists of receiving a given API and manipulate the data contained in it, in order to create a site, displaying the information."
+LABEL description="Image file for a web server that consists of receiving a given API and manipulate the data contained in it in order to create a site displaying the information."
 
 # Set the working directory inside the container
 WORKDIR /app
