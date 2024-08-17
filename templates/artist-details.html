@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/static/artist-details.css" />
+
+    <title>Artist Details</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-container">
+          <h3>Groupie <span>Tracker</span></h3>
+        </div>
+
+        <div class="back-to-home">
+          <a href="/templates/index.html">Back Home</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <!-- {{range .Artists}} -->
+        <div class="artist-details">
+          <h4 class="name">{{.Name}}</h4>
+          <div class="detail">
+            <div class="left-wrap">
+              <img src="{{.Image}}" alt="{{.Name}}" />
+
+              <p>
+                <strong>Members:</strong>
+                {{.Members}}
+              </p>
+
+              <p><strong>Creation Date:</strong>{{.CreationDate}}</p>
+
+              <p><strong>Creation Date:</strong>{{.CreationDate}}</p>
+            </div>
+
+            <div class="right-wrap">
+              <div class="locations">
+                <h4>Locations</h4>
+                <ol>
+                  {{range .Locations}}
+                  <li>{{.}}</li>
+                  {{end}}
+                </ol>
+              </div>
+
+              <div class="dates">
+                <h4>Dates</h4>
+                <ol>
+                  {{range .Dates}}
+                  <li>{{.}}</li>
+                  {{end}}
+                </ol>
+              </div>
+
+              <div class="relation">
+                <h4>Relations</h4>
+                <ol>
+                  {{range .DatesLocations}}
+                  <li>
+                    {{$location}}:
+                    <ul>
+                      {{range $dates}}
+                      <li>{{.}}</li>
+                      {{end}}
+                    </ul>
+                  </li>
+                  {{end}}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- {{.end}} -->
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
