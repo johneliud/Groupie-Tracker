@@ -105,6 +105,7 @@ main .container .artist-details .detail {
   align-items: start;
   justify-content: center;
   column-gap: 50px;
+  padding: 10px;
 }
 
 main .container .artist-details .detail::before {
@@ -124,6 +125,7 @@ main .container .artist-details .detail .left-wrap {
   place-items: center;
   /* text-align: center; */
   row-gap: 20px;
+  padding: 10px;
 }
 
 main .container .artist-details .detail .left-wrap img {
@@ -140,7 +142,8 @@ main .container .artist-details .detail .right-wrap {
   width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  row-gap: 20px;
+  gap: 20px;
+  padding: 10px;
 }
 
 main .container .artist-details .detail .right-wrap .locations,
@@ -150,6 +153,9 @@ main .container .artist-details .detail .right-wrap .relation {
   display: grid;
   /* place-items: center; */
   row-gap: 10px;
+  border: 2px solid rgb(45, 45, 165);
+  border-radius: var(--border-radius);
+  padding: 10px;
 }
 
 main .container .artist-details .detail .right-wrap .locations h4,
