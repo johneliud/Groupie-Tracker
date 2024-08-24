@@ -12,7 +12,9 @@
     <header>
       <nav class="navbar">
         <div class="logo-container">
-          <h3>Groupie <span>Tracker</span></h3>
+          <a href="/">
+            <h3>Groupie <span>Tracker</span></h3>
+          </a>
         </div>
       </nav>
     </header>
@@ -22,20 +24,33 @@
         <h1>Bringing You <span>Closer</span> To Your Favorite Artists</h1>
       </div>
 
-      <div class="subtitle">
-        <h2>Choose from a category below:</h2>
+      <div class="proceed-to-artists">
+        <a href="/artists">
+          <button class="proceed">
+            Proceed To Artists
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </a>
       </div>
 
-      <div class="categories">
+      <!-- <div class="categories">
         <a href="/templates/artists.html" class="category-btn" id="artists"
           >Artists</a
         >
         <a href="" class="category-btn" id="locations">Locations</a>
         <a href="" class="category-btn" id="dates">Dates</a>
         <a href="" class="category-btn" id="relations">Relations</a>
-      </div>
+      </div> -->
     </div>
 
     <script src="/static/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
