@@ -25,7 +25,7 @@ a {
 body {
   display: grid;
   place-items: center;
-  background: url('/imgs/background.jpeg');
+  background: url('/static/imgs/background.jpeg');
   background-size: cover;
 }
 

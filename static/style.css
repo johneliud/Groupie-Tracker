@@ -26,7 +26,7 @@ body {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  background: url('/imgs/background.jpeg');
+  background: url('/static/imgs/background.jpeg');
   background-size: cover;
 }
 
