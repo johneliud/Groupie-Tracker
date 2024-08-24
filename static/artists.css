@@ -11,6 +11,11 @@ html {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 :root {
   --transition: 0.5s ease;
   --border-radius: 10px;
@@ -61,7 +66,7 @@ header .navbar .back-to-home a {
   color: white;
   font-weight: 600;
   padding: 5px 20px;
-  border: 2px solid transparent;
+  border: none;
   border-radius: var(--border-radius);
   transition: var(--transition);
   cursor: pointer;
@@ -70,7 +75,6 @@ header .navbar .back-to-home a {
 header .navbar .back-to-home a:hover {
   background-color: white;
   color: rgb(45, 45, 165);
-  border: 2px solid rgb(45, 45, 165);
 }
 
 main {
@@ -108,4 +112,3 @@ main .container .artist-card .artist-link .artist-info .name {
   font-weight: 600;
   color: black;
 }
-

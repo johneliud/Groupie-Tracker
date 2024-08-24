@@ -7,6 +7,15 @@
   font-family: 'League Spartan', sans-serif;
 }
 
+html {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 :root {
   --transition: 0.5s ease;
   --border-radius: 10px;
@@ -67,33 +76,27 @@ header .navbar .logo-container h3 span {
   color: rgb(45, 45, 165);
 }
 
-.container .subtitle {
-  margin: 0 auto 25px;
+.container .proceed-to-artists {
+  width: 50%;
+  text-align: center;
 }
 
-.container .categories {
+.container .proceed-to-artists .proceed {
   width: 100%;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  border: none;
+  background-color: var(--background-color);
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: var(--transition);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
-.container .categories .category-btn {
-  text-decoration: none;
-  padding: 5px 20px;
-  font-weight: 600;
-  border-radius: var(--border-radius);
-  border: 2px solid transparent;
-  font-size: 18px;
-  color: white;
-  background-color: var(--background-color);
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.container .categories .category-btn:hover {
+.container .proceed-to-artists .proceed:hover {
   color: var(--background-color);
   background-color: white;
-  border: 2px solid transparent;
 }
