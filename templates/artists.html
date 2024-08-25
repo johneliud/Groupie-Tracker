@@ -25,7 +25,7 @@
 
     <main>
       <div class="container">
-        <!-- {{range .Artists}} -->
+        {{range .Artists}}
         <div class="artist-card">
           <a href="artist/{{.ID}}" class="artist-link">
             <img src="{{.Image}}" alt="{{.Name}}" />
@@ -34,73 +34,10 @@
             </div>
           </a>
         </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-
-        <div class="artist-card">
-          <a href="artist/{{.ID}}" class="artist-link">
-            <img src="{{.Image}}" alt="{{.Name}}" />
-            <div class="artist-info">
-              <h4 class="name">{{.Name}}</h4>
-            </div>
-          </a>
-        </div>
-        <!-- {{.end}} -->
+        {{end}}
       </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="/static/script.js"></script>
   </body>
 </html>
