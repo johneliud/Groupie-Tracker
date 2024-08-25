@@ -12,14 +12,16 @@ func ServeIndex(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl, err := template.ParseFiles("../templates/index.html")
+	tmpl, err := template.ParseFiles("templates/index.html")
 	if err != nil {
 		log.Printf("Error parsing template: %s", err)
 		http.Error(w, "Something Unexpected Happened. Try Again Later", http.StatusInternalServerError)
+		return
 	}
 	err = tmpl.Execute(w, nil)
 	if err != nil {
 		log.Printf("Error executing template: %s", err)
 		http.Error(w, "Something Unexpected Happened. Try Again Later", http.StatusInternalServerError)
+		return
 	}
 }

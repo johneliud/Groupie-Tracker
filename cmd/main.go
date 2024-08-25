@@ -8,8 +8,7 @@ import (
 )
 
 func main() {
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-
+	http.HandleFunc("/static/", handlers.ServeStatic)
 	http.HandleFunc("/", handlers.ServeIndex)
 
 	port := ":9000"
