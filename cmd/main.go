@@ -10,6 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/static/", handlers.ServeStatic)
 	http.HandleFunc("/", handlers.ServeIndex)
+	http.HandleFunc("/artists", handlers.ServeArtists)
 
 	port := ":9000"
 
