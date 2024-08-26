@@ -84,97 +84,141 @@ main {
 }
 
 main .container {
-  width: 95%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 30px;
+  margin: 30px auto;
 }
 
-main .container .artist-details {
-  width: 100%;
-  margin: 80px auto 0;
-  display: grid;
-  place-items: center;
-  padding: 10px;
+.left-side {
+  flex: 1;
+  padding-right: 30px;
 }
 
-main .container .artist-details .name {
-  font-size: 35px;
-  font-weight: 600;
-  margin: 0 auto 20px;
+.right-side {
+  flex: 2;
+  margin: 50px auto 0;
 }
 
-main .container .artist-details .detail {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  width: 100%;
-  column-gap: 50px;
-  padding: 10px;
-}
-
-main .container .artist-details .detail::before {
-  content: '';
-  width: 2px;
-  height: 50%;
-  background-color: rgb(45, 45, 165);
-  display: block;
-  top: 50;
-  left: 41.5%;
-  position: fixed;
-}
-
-main .container .artist-details .detail .left-wrap {
-  width: 40%;
-  display: grid;
-  place-items: center;
-  /* text-align: center; */
-  row-gap: 20px;
-  padding: 10px;
-}
-
-main .container .artist-details .detail .left-wrap img {
-  width: 100%;
+.artist-image {
+  max-width: 100%;
   border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 50px auto 0;
 }
 
-main .container .artist-details .detail .left-wrap p {
-  font-weight: 400;
+.artist-name {
+  font-size: 30px;
+  margin: 0 auto 20px;
+  color: var(--background-color);
+  position: absolute;
+  left: 50%;
+}
+
+.artist-info p {
+  margin: 10px 0;
   font-size: 18px;
 }
 
-main .container .artist-details .detail .right-wrap {
-  width: 60%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 10px;
+.tab-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  column-gap: 10px;
 }
 
-main .container .artist-details .detail .right-wrap .locations,
-main .container .artist-details .detail .right-wrap .dates,
-main .container .artist-details .detail .right-wrap .relation {
-  width: 100%;
-  display: grid;
-  /* place-items: center; */
-  row-gap: 10px;
-  border: 2px solid rgb(45, 45, 165);
-  border-radius: var(--border-radius);
-  padding: 10px;
-}
-
-main .container .artist-details .detail .right-wrap .locations h4,
-main .container .artist-details .detail .right-wrap .dates h4,
-main .container .artist-details .detail .right-wrap .relation h4 {
+.tab {
+  padding: 12px 24px;
+  background-color: white;
+  color: var(--background-color);
+  border: 2px solid var(--background-color);
   font-weight: 600;
-  font-size: 20px;
-  color: rgb(45, 45, 165);
+  cursor: pointer;
+  border-radius: 20px;
+  transition: var(--transition);
 }
 
-main .container .artist-details .detail .right-wrap .locations ol li,
-main .container .artist-details .detail .right-wrap .dates ol li,
-main .container .artist-details .detail .right-wrap .relation ol li   {
-  font-weight: 400;
-  font-size: 16px;
-  list-style-position: inside;
+.tab:hover {
+  color: white;
+  background-color: var(--background-color);
+  border: 2px solid transparent;
 }
+
+.tab.active {
+  background-color: var(--background-color);
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tab-content h3 {
+  font-size: 24px;
+  margin: 0 0 5px;
+  color: var(--background-color);
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.relations-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.relation-item {
+  margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.relation-item:hover {
+  transform: translateY(-5px);
+}
+
+.relation-location {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.relation-dates {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.relation-date {
+  margin: 5px 0;
+  font-size: 16px;
+  color: white;
+}
+
+#dates ul,
+#locations ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#dates li,
+#locations li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+  background-color: var(--background-color);
+  color: white;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+#dates li:hover,
+#locations li:hover {
+  transform: translateY(-3px);
+}
+
