@@ -11,6 +11,10 @@ func main() {
 	http.HandleFunc("/static/", handlers.ServeStatic)
 	http.HandleFunc("/", handlers.ServeIndex)
 	http.HandleFunc("/artists", handlers.ServeArtists)
+	http.HandleFunc("/locations", handlers.ServeLocations)
+	http.HandleFunc("/dates", handlers.ServeDates)
+	http.HandleFunc("/relations", handlers.ServeRelations)
+	http.HandleFunc("/artist/", handlers.ServeArtistDetails)
 
 	port := ":9000"
 
